@@ -1,0 +1,92 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul { list-style: none; padding-left: 5px; }
+a { color:blue; text-decoration: none;}
+a:hover {
+    text-decoration: underline;
+}
+.bar {
+    background-color: #f9f9fb;
+    padding:15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+.content {
+    max-width: 1440px;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.logo {
+    width: 50%;
+}
+figure {
+    text-align: center;
+}
+header {
+    background-color: orange; /* opcional */ 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+}
+.anchors-container {
+    position: sticky; /* Fixa o contêiner ao lado da página */
+    top: 126px; /* Começa desde o topo */
+    right: 0; /* Alinha à direita da página */
+    height: 100vh; /* Ocupa toda a altura da janela */
+    border-left: solid 1px #cdcdcd; /* Borda à esquerda */
+    border-top: solid 1px #cdcdcd;
+    padding-bottom: 0;
+    border-bottom: 0;
+    z-index: 1000; /* Garante que o índice fique acima de outros conteúdos */
+}
+
+.anchors {
+    padding: 20px; /* Espaçamento interno */
+    overflow-y: auto; /* Rolagem interna se necessário */
+}
+
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+
+}
+
+details summary {
+    /*list-style: none; Remove a seta padrão */
+    color: blue; 
+}
+
+ul li > details {
+    padding-left: 0; /* Remove o padding do <details> */
+}
+
+ul li:not(:has(details)) {
+    padding-left: 14.8px;
+}
+
+article h1 {
+    font-size: 1.8em !important; /* Garante que o h1 dentro do article mantenha o tamanho desejado */
+    margin-top: 1.8em;
+    margin-block-end: 0px;
+}
+
+article h2, h3, h4, h5, h6 {
+    margin-top: 1.8em;
+    margin-block-end: 0px;
+}
+
+img {
+    width: 200px !important;
+}
